@@ -1,0 +1,79 @@
+A alto
+B medio alto
+C medio
+D medio bajo
+E bajo
+
+
+
+
+//CADA GRUPO DEBE TENER ESTOS CUATRO
+Coordinator (organizacion >=4, liderazgo >=4, decisión>=3, ordenclase>=3) 
+Environment (organizacion >=3, liderazgo >=3, decisión>=3, ordenclase>=4)
+Speaker (liderazgo >=2, decisión>=3)
+Supervisor (organizacion >=4, liderazgo >=2)
+
+//PERFIL COOPERATIVO DE CADA PERSONA
+Perfil cooperativo AB (academico 50%, social 25%, capazayudar 25%)
+Perfil cooperativo C (academico 50%, social 25%, capazayudar 12.5% necesitaayuda 12.5%)
+Perfil cooperativo DE (academico 50%, social 25%, necesitaayuda 25%)
+
+Algoritmo (alumnos, numerointegrantes(int, int, int, int, int, int))
+{
+   Mientras alumnos //SIga habiendo alumnis
+   {
+      //Ordena 5 arrays de alumnos ordenados 
+      académico=ordenar(academico)
+      social=ordenar(social)
+      sexo=ordenar(sexo)
+      capazayudar=ordenar(capazayudar)
+      necesitaayuda=ordenar(necesitaayuda)
+   }
+  
+   Establecer perfiles(alumnos ordenados)
+   {
+      buscar ngrupos (mejor academico)
+      calcular perfil cooperativoA
+      establecer perfilA
+ 
+      buscar ngrupos (peor academico)
+      calcular perfil cooperativoD
+      establecer perfilD
+      
+      buscar ngrupos (medioalto academico)
+      calcular perfil cooperativoB
+      establecer perfilB
+      
+      buscar ngrupos (mediobajo academico)
+      calcular perfil cooperativoD
+      establecer perfilD
+
+      buscar ngrupos (medio academico)
+      calcular perfil cooperativoC
+      establecer perfilC      
+   }
+   
+   Combinar (sexo, preferencias)
+   {
+      si numeroA>=ngrupos
+         Establecer A por grupo
+      else completaB
+ 
+      si numeroE>=ngrupos
+         Establecer D por grupo
+      else completaE
+
+      si numeroD>=ngrupos
+         Establecer D por grupo
+      else completaC
+      
+      si numeroB>=ngrupos
+         Establecer B por grupo
+      else completaC
+     
+      si sobra alumno entonces integrarengrupo (perfilCooperativo)
+      
+   }
+
+   Establecer Roles
+}
